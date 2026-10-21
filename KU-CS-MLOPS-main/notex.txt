@@ -22,3 +22,31 @@ python train.py
 Step-7: Implement FastAPI and create endpoints
 Step-8: Start the API
 uvicorn main:app --reload
+
+phase-2: virtualization with Docker
+
+why we need docker?
+ - imagine you are runing your code on your laptop with a different programming version and another user is working on a different version..
+
+Reason of failures:
+ -Using different programming version
+ -Using different version of libraries like scikit-learn, FastAPI
+ -Missing Python packages
+ -Different OS dependencies
+
+Docker helps package your application code, runtime, dependencies and startup 
+instructions into a standardized imagine
+
+4 major requirements:
+-Dockerfile -Set of instructions for packaging ML application
+-Image - packaged reusable application artifact
+-Container - A running instance of the image
+-Port Mapping -Makes the API inside the
+
+docker commands:
+docker phasecheck running containers
+
+docker ps -Acheck all active/non-active containers
+
+docker build -t mlops-iris-image-cs .
+-t = tag name = name of the image
