@@ -50,3 +50,10 @@ docker ps -Acheck all active/non-active containers
 
 docker build -t mlops-iris-image-cs .
 -t = tag name = name of the image
+
+docker run -d -p 8000:8000 --name mlops-cs-container mlops-iris-image-cs
+
+Phase-3: Automated Testing and CI/CD with GitHUB actions
+
+Our goal:
+Whenever we push code on GithHub, the system should automatically run tests and build the Docker image. Late we will extend the same pipeline to publish the image and deploy it

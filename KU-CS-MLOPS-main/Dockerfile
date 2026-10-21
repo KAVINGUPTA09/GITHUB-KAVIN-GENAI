@@ -1,19 +1,18 @@
 # Pull the python image from Docker HUB
 # Use a lightweight python image
-FROM python:3.14-slim
+FROM python:3.12-slim
 
 # set the working directory inside container
 WORKDIR /app
 
 # Copy dependency list before copying application code
-COPY requirement.txt .
+COPY KU-CS-MLOPS-main/mlops-first-pipeline/requirements.txt requirements.txt
 
 # Install the dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# copy application code and save model inside /app
-
-COPY . .
+# copy application code and saved model inside /app
+COPY KU-CS-MLOPS-main/mlops-first-pipeline/ .
 
 # Document the port used by the FastAPI application
 EXPOSE 8000
